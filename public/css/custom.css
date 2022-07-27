@@ -68,8 +68,7 @@ body{
 
 .road-img img{
     width: 100%;
-    height: 700px;
-    object-fit: none;
+    object-fit: cover;
 }
 
 #sign-help{

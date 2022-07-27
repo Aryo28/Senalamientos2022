@@ -31,7 +31,12 @@ class ClasificacionController extends Controller
         $data = Senalamiento_image::find($id);
         $clasificacion = DB::table('simbologia_senalamiento')->select('id','nombre_clasificacion')->get();
 
-        return view('senalamientos.create', compact('data', 'clasificacion'));
+        if($data == null){
+            return redirect('/');
+        }else{
+            return view('senalamientos.create', compact('data', 'clasificacion'));
+        }
+        
     }
 
     /**
